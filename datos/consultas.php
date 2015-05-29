@@ -7,7 +7,7 @@ function consultas()
 	$consulta  = sprintf("select * from usuarios");
 	$resultado = mysql_query($consulta);
 	$renglones = "<tr>";
-	$renglones.= "<th>No.</th><th>Usuario</th><th>Nombre</th><th>Tipo</th><th>Acción</th>";
+	$renglones.= "<th>No.</th><th>Usuario</th><th>Nombre</th><th>Tipo</th><th>Accion</th>";
 	$renglones.= "</tr>";
 	$cuenta    = 0;
 	if(mysql_num_rows($resultado)>0)
@@ -31,7 +31,7 @@ function consultas()
 	}
 	else
 	{
-		$renglones.= "<tr><td colspan=4>Sin usuarios</td></tr>";
+		$renglones.= "<tr><td colspan=5>Sin usuarios</td></tr>";
 	}
 	$salidaJSON = array('respuesta' => $respuesta, 
 						'renglones' => $renglones);

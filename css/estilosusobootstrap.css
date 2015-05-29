@@ -45,6 +45,12 @@ header nav ul li
 	margin: 0 auto;
 	width: 550px;	
 }
+#artClave
+{
+	display: none;
+	margin: 0 auto;
+	width: 350px;	
+}
 
 .mi-caja-entrada
 {
