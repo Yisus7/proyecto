@@ -78,7 +78,7 @@ var inicioApp = function()
 		$("#btnGuardarUsuarios").hide();	
 		$("#btnCambiarUsuarios").hide();	
 		$("#btnCambioClave").show();				
-		$("#txtClaveActual").focus();	
+		$("#txtNomUsuario").focus();	
 	}
 	var Inicio = function()
 	{
@@ -250,22 +250,22 @@ var inicioApp = function()
 		EliminarUsuarios();
 		Consultas();
 	}
-	/*var CambiaClave = function()
+	var CambiaClave = function()
 	{
-		var usuario = $("#txtNomUsuario").val();	
+		var usuario = $("#txtNomUsuario").val();
+		var nombre = $("#txtNombreUsuario").val();
 		if(usuario!="")
 		{
-			var parametros = "opcion=cambiarusuarios"+
+			var parametros = "opcion=cambiarclave"+
 							 "&usuario="+usuario+
 							 "&nombre="+nombre+
-							 "&tipousuario="+tipo+
 							 "&id="+Math.random();
 			$.ajax({
 				cache: false,
 				type: "POST",
 				dataType: "json",
 				data: parametros,
-				url: "datos/cambiarusuarios.php",
+				url: "datos/cambiarclave.php",
 				success: function(response){
 					if(response.respuesta == true)
 					{
@@ -279,7 +279,7 @@ var inicioApp = function()
 				}
 			});
 		}	
-	}*/
+	}
 
 	//Eventos del usuario.
 	$("#btnValidaUsuario").on("click",validausuario);
